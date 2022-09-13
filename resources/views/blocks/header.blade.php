@@ -26,13 +26,9 @@
                                 </li>
                             @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">User</a>
+                                    <a class="nav-link" href="{{route('create')}}">User</a>
                                 </li>
                             @endif
-                        @else
-                            <li class="nav-item" style="display: none">
-                                <a class="nav-link" href="">User</a>
-                            </li>
                         @endif
                     </ul>
                 </div>

@@ -26,7 +26,7 @@ class AdminController extends Controller
     // (Get)
     public function create()
     {
-        //
+        return view('layouts.user');
     }
 
     /**
@@ -35,7 +35,7 @@ class AdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    //Sử lý thêm sản phẩm (Post)
+    //Xử lý thêm(Post)
     public function store(Request $request)
     {
         //
