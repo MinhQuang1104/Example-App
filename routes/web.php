@@ -19,6 +19,12 @@ Route::get('/', function () {
     return view('dashboard');
 })->name('home');
 
+Route::group(['prefix'=>'/users', 'middleware' => 'checklogin'], function() {
+    Route::get('/', [AdminController::class, 'index'])->name('index');
+    Route::get('/create', [AdminController::class, 'create'])->name('create');
+    Route::post('/create', [AdminController::class, 'store'])->name('create-new');
+});
+
 Route::group(['prefix'=>'/home', 'middleware' => 'checklogin'], function() {
     Route::get('/', [AdminController::class, 'index'])->name('index');
 });
